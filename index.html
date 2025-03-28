@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF論文リネームツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PDF論文リネームツール</h1>
+    <p>PDFファイルを下のエリアにドラッグ＆ドロップしてください。</p>
+
+    <div id="drop-zone">
+        ここにファイルをドロップ
+    </div>
+
+    <div id="result">
+        <h2>処理結果:</h2>
+        <ul id="file-list"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+        // pdf.jsのワーカーパスを設定
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
